@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello world</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- diferença do v-if para o v-show, é que o v-show ele da um display none ou block, ja o v-if ele nao renderiza o item -->
+      <div v-show="showTitle">{{ title }}</div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    Vue.createApp({
+      data() {
+        return {
+          title: "Hello world",
+          showTitle: true,
+        };
+      },
+    }).mount("#app");
+  </script>
+</html>
