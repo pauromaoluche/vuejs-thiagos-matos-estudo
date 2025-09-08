@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello world</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="container mt-5">
+        <h1>{{ title }}</h1>
+        <div class="card shadow">
+            <div class="card-body">
+                <p class="small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, eaque est recusandae magnam quia eligendi? Perferendis perspiciatis dolor reprehenderit aspernatur aliquam molestias ullam iusto, similique est quibusdam error natus tempore.</p>
+                <div class="mb-3">
+                    <label for="">Nome completo</label>
+                    <input type="text" v-model="name" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    Vue.createApp({
+      data() {
+        return {
+          title: "Hello world",
+          name: "Jon Snow",
+        };
+      },
+    }).mount("#app");
+  </script>
+</html>
