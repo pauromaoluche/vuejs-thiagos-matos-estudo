@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello world</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="container mt-5">
+      <h1>{{ title }}</h1>
+      <div class="col-12">
+   <div class="d-flex justify-content-between">
+      <div>
+         <p class="text-dark">Guests</p>
+      </div>
+      <div class="input-group w-auto justify-content-end align-items-center">
+         <button class="decrement" type="button" @click="counter -= 1">-</button>
+         <input  type="text" v-model="counter">
+         {{ counter }}
+         <button class="increment" type="button" @click="counter += 1">+</button>
+      </div>
+   </div>
+</div>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+  Vue.createApp({
+    data() {
+      return {
+        counter: 0
+      };
+    },
+  }).mount("#app");
+</script>
+
+</html>
